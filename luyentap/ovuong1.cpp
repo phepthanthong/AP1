@@ -1,0 +1,42 @@
+#include <iostream>
+#include <math.h>
+using namespace std ;
+
+//viet chuong trinh xuat ra man hinh o vuong dung ham void
+
+void affiche_ligne(string mess, int largeur)
+{
+  cout << "#" ;
+	  int nb_espace=(largeur-mess.length() -2)/2;
+	  for (int k=0;k<nb_espace;k++)
+	    cout << " ";
+	  cout << mess;
+	  for (int k=0;k<nb_espace;k++)
+	    if ((nb-mess.length() -2 % 2 ==0))
+	      cout << " ";
+	  cout << "#" ;
+}
+int main () 
+{ int largeur, mess ;
+  cin >> largeur;
+  for (int i=0;i<largeur;i++)
+    { 
+      if (i==largeur/2)
+	{ 
+	  affiche_ligne (mess,largeur);
+	    }
+      if (i==(largeur/2)+1)
+	{
+	  affiche_ligne (mess,largeur);
+	}
+      for (int j=0;j<largeur;j++)
+	{ 
+	  if (i==0 || i==largeur-1)
+	    cout << "#" ;
+	  else if (j==0 || j==largeur-1)
+	    cout << "#";
+	  else cout << " ";
+	}
+      cout << endl;
+  }
+} 
